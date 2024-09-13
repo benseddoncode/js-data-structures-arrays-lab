@@ -5,6 +5,7 @@ const fs = require('file-system')
 const jsdom = require('mocha-jsdom')
 const path = require('path')
 const babel = require('babel-core');
+const test02 = ConflictTest02
 
 const html = fs.readFileSync(path.resolve(__dirname, '..', 'index.html'), 'utf-8')
 
@@ -19,3 +20,5 @@ const src = babelResult.code
 jsdom({
   html, src
 });
+
+console.log(test02)
